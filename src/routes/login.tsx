@@ -58,9 +58,7 @@ function Login() {
     <div className="min-h-screen bg-background font-sans text-foreground">
       <header className="relative z-10 flex h-[72px] items-center justify-between border-b border-border bg-card px-5 sm:px-8 lg:px-12">
         <Link to="/login" className="flex items-center gap-2.5" aria-label="TeamSync XP home">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-hero text-primary-foreground shadow-sm">
-            <Zap className="h-5 w-5" />
-          </span>
+          <img src="/teamsync-logo.png" alt="" className="h-9 w-9 rounded-lg object-contain" />
           <span className="text-lg font-extrabold tracking-tight">
             TeamSync<span className="text-lilac"> XP</span>
           </span>

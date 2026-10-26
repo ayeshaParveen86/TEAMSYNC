@@ -86,7 +86,7 @@
   --success: oklch(0.62 0.15 150);
   --success-soft: oklch(0.95 0.05 150);
   --primary-soft: oklch(0.94 0.04 262);
-  --gradient-hero: linear-gradient(120deg, oklch(0.52 0.2 262), oklch(0.62 0.2 300));
+  --hero: oklch(0.48 0.18 255);
   --shadow-card: 0 8px 24px -12px oklch(0.4 0.1 270 / 0.25);
   --background: oklch(0.985 0.006 280);
   --foreground: oklch(0.129 0.042 264.695);
@@ -157,6 +157,10 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+.dashboard-theme {
+  --radius: 0.65rem;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -175,5 +179,5 @@
   box-shadow: var(--shadow-card);
 }
 @utility bg-hero {
-  background: var(--gradient-hero);
+  background: var(--hero);
 }
