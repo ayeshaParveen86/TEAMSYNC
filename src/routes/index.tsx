@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
+import { DashboardSidebar } from "../components/dashboard-sidebar";
 import {
   AlertTriangle,
   Clock,
@@ -9,9 +10,6 @@ import {
   Flame,
   Zap,
   Target,
-  LayoutDashboard,
-  Users,
-  Award,
   Plus,
   Search,
   Medal,
@@ -227,66 +225,7 @@ function Index() {
 
   return (
     <div className="dashboard-theme min-h-screen bg-background font-sans text-foreground lg:flex">
-      {/* Sidebar */}
-      <aside className="hidden w-60 shrink-0 flex-col gap-1 border-r border-border bg-card p-5 lg:flex">
-        <div className="mb-6 flex items-center gap-2">
-          <img src="/teamsync-logo.png" alt="" className="h-9 w-9 rounded-lg object-contain" />
-          <div>
-            <p className="text-xs text-muted-foreground leading-none">Team</p>
-            <p className="text-lg font-extrabold leading-tight">
-              TeamSync<span className="text-lilac"> XP</span>
-            </p>
-          </div>
-        </div>
-        {[
-          [LayoutDashboard, "Dashboard", true],
-          [ListTodo, "Backlog"],
-          [Users, "Team"],
-          [Trophy, "Leaderboard"],
-          [Award, "Badges"],
-        ].map(([I, l, a]) => {
-          const Icon = I as typeof Zap;
-          return l === "Dashboard" || l === "Leaderboard" || l === "Team" || l === "Badges" ? (
-            <Link
-              key={l as string}
-              to={
-                l === "Leaderboard"
-                  ? "/leaderboard"
-                  : l === "Team"
-                    ? "/team"
-                    : l === "Badges"
-                      ? "/badges"
-                      : "/"
-              }
-              className={`flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium ${a ? "bg-primary-soft text-primary" : "text-muted-foreground hover:bg-muted"}`}
-            >
-              <Icon className="h-4 w-4" />
-              {l as string}
-            </Link>
-          ) : (
-            <a
-              key={l as string}
-              href="#"
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted"
-            >
-              <Icon className="h-4 w-4" />
-              {l as string}
-            </a>
-          );
-        })}
-        <Link
-          to="/login"
-          className="mt-2 rounded-lg px-3 py-2 text-sm font-medium text-urgent hover:bg-urgent-soft"
-        >
-          Log out
-        </Link>
-        <div className="mt-auto rounded-lg bg-sun-soft p-4">
-          <p className="text-xs font-semibold text-soon">Sprint 4 · Week 2</p>
-          <p className="mt-1 text-sm">
-            Finish tasks early for <b>+{XP_BONUS} bonus XP</b>!
-          </p>
-        </div>
-      </aside>
+      <DashboardSidebar activePage="Dashboard" showSprintTip bonusXP={XP_BONUS} />
 
       <main className="flex-1 space-y-6 p-4 md:p-8">
         {/* Header */}

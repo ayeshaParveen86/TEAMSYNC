@@ -1,16 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  Award,
-  Flame,
-  LayoutDashboard,
-  ListTodo,
-  Rocket,
-  Star,
-  Target,
-  Trophy,
-  Users,
-  Zap,
-} from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Flame, Rocket, Star, Target, Zap } from "lucide-react";
+import { DashboardSidebar } from "../components/dashboard-sidebar";
 
 export const Route = createFileRoute("/badges")({
   head: () => ({
@@ -37,60 +27,7 @@ const badges = [
 function Badges() {
   return (
     <div className="dashboard-theme min-h-screen bg-background font-sans text-foreground lg:flex">
-      <aside className="hidden w-60 shrink-0 flex-col gap-1 border-r border-border bg-card p-5 lg:flex">
-        <div className="mb-6 flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-lg bg-hero text-primary-foreground">
-            <Zap className="h-5 w-5" />
-          </div>
-          <div>
-            <p className="text-xs leading-none text-muted-foreground">Team</p>
-            <p className="text-lg font-extrabold leading-tight">
-              TeamSync<span className="text-lilac"> XP</span>
-            </p>
-          </div>
-        </div>
-        <Link
-          to="/"
-          className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted"
-        >
-          <LayoutDashboard className="h-4 w-4" />
-          Dashboard
-        </Link>
-        <Link
-          to="/backlog"
-          className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted"
-        >
-          <ListTodo className="h-4 w-4" />
-          Backlog
-        </Link>
-        <Link
-          to="/team"
-          className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted"
-        >
-          <Users className="h-4 w-4" />
-          Team
-        </Link>
-        <Link
-          to="/leaderboard"
-          className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted"
-        >
-          <Trophy className="h-4 w-4" />
-          Leaderboard
-        </Link>
-        <Link
-          to="/badges"
-          className="flex items-center gap-3 rounded-md bg-primary-soft px-3 py-2 text-sm font-medium text-primary"
-        >
-          <Award className="h-4 w-4" />
-          Badges
-        </Link>
-        <Link
-          to="/login"
-          className="mt-2 rounded-lg px-3 py-2 text-sm font-medium text-urgent hover:bg-urgent-soft"
-        >
-          Log out
-        </Link>
-      </aside>
+      <DashboardSidebar activePage="Badges" />
 
       <main className="flex-1 space-y-6 p-4 md:p-8">
         <header className="rounded-xl bg-hero p-6 text-primary-foreground md:p-8">
