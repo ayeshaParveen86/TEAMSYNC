@@ -313,13 +313,13 @@ function Login() {
             </div>
 
             <div className="absolute left-[48%] top-[4%] grid h-9 w-9 place-items-center rounded-full border-2 border-[#141521] bg-gradient-to-br from-amber-200 to-rose-400 text-[10px] font-extrabold shadow-lg sm:h-11 sm:w-11">
-              R
+              A
             </div>
             <div className="absolute right-[16%] top-[48%] grid h-9 w-9 place-items-center rounded-full border-2 border-[#141521] bg-gradient-to-br from-emerald-200 to-teal-500 text-[10px] font-extrabold shadow-lg sm:h-11 sm:w-11">
-              P
+              L
             </div>
             <div className="absolute left-[8%] bottom-[34%] grid h-9 w-9 place-items-center rounded-full border-2 border-[#141521] bg-gradient-to-br from-fuchsia-300 to-violet-600 text-[10px] font-extrabold shadow-lg sm:h-11 sm:w-11">
-              M
+              A
             </div>
 
             <div className="absolute left-[71%] top-[62%] hidden items-center gap-1.5 rounded-lg border border-white/10 bg-[#222330] px-2.5 py-2 text-[10px] font-semibold text-slate-300 sm:flex">

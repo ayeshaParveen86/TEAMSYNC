@@ -23,7 +23,7 @@ type Priority = "High" | "Medium" | "Low";
 type Status = "To do" | "In progress" | "Done";
 type Task = { id: string; title: string; assignee: string; priority: Priority; status: Status; due: number; doneAt?: number | undefined };
 
-const MEMBERS = ["Ayesha", "Rahul", "Priya", "Arjun"];
+const MEMBERS = ["Ayesha", "Afsheen", "Laharika"];
 const HOUR = 3600_000;
 const XP_TASK = 10;
 const XP_BONUS = 5;
@@ -35,14 +35,14 @@ function seed(now: number): Task[] {
   });
   return [
     t(101, "Design login screen", "Ayesha", "High", "Done", -30, -40),
-    t(102, "Set up SQL schema for tasks", "Rahul", "High", "In progress", -5),
-    t(103, "Build task filter bar", "Priya", "Medium", "To do", 10),
-    t(104, "Leaderboard component", "Arjun", "Medium", "In progress", 20),
+    t(102, "Set up SQL schema for tasks", "Afsheen", "High", "In progress", -5),
+    t(103, "Build task filter bar", "Laharika", "Medium", "To do", 10),
+    t(104, "Leaderboard component", "Laharika", "Medium", "In progress", 20),
     t(105, "Write README & Git workflow", "Ayesha", "Low", "To do", 72),
-    t(106, "Responsive dashboard layout", "Priya", "High", "Done", -2, -10),
-    t(107, "Deadline reminder logic", "Rahul", "Medium", "Done", 30, -1),
-    t(108, "Badge icons & styles", "Arjun", "Low", "To do", -20),
-    t(109, "Node.js API endpoints", "Rahul", "High", "To do", 48),
+    t(106, "Responsive dashboard layout", "Laharika", "High", "Done", -2, -10),
+    t(107, "Deadline reminder logic", "Afsheen", "Medium", "Done", 30, -1),
+    t(108, "Badge icons & styles", "Ayesha", "Low", "To do", -20),
+    t(109, "Node.js API endpoints", "Afsheen", "High", "To do", 48),
   ];
 }
 
